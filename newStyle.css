@@ -226,12 +226,6 @@ li{
     }
 }
 
-@media screen and (max-width: 768px) {
-    .logo-text svg {
-        height: 1.2em;
-    }
-
-}
 
 .button {
     position: relative;
@@ -288,6 +282,22 @@ li{
 }
 .button:hover {
     scale: 1.1;
+
+}
+@media screen and (max-width: 768px) {
+    .logo-text svg {
+        height: 1.2em;
+    }
+    .hero-btns{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .hero-btns .hero-button{
+        width: 200px;
+        
+    }
+   
 
 }
 
@@ -354,7 +364,10 @@ p{
         height: 60px;
     }
     .hero img{
-        max-width: 80% !important;
+        max-width: 60% !important;
+    }
+    .button{
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 986px) {
@@ -1064,8 +1077,11 @@ cursor: pointer;
 }
 
 .footer p {
+
     cursor: pointer;
     font-weight: 500;
+  
+   
 }
 
 .follow-button:hover {
