@@ -4,15 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="twitter:description"
-    content="Explore microHR, the best HR software for small businesses in India. Simplify attendance, payroll, and more with our user-friendly solution.">
-<meta name="description"
-    content="Explore microHR, the best HR software for small businesses in India. Simplify attendance, payroll, and more with our user-friendly solution.">
-<meta property="og:title" content="Welcome, to microHR - Your Small Business HR Solution.">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta property="og:type" content="website">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome, to microHR - Your Small Business HR Solution</title>
-<link rel="icon" type="image/svg+xml" href="/assets/fav.png" />
+        content="Explore microHR, the best HR software for small businesses in India. Simplify attendance, payroll, and more with our user-friendly solution.">
+    <meta name="description"
+        content="Explore microHR, the best HR software for small businesses in India. Simplify attendance, payroll, and more with our user-friendly solution.">
+    <meta property="og:title" content="Welcome, to microHR - Your Small Business HR Solution.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome, to microHR - Your Small Business HR Solution</title>
     <link rel="stylesheet" href="newStyle.css">
     <link rel="stylesheet" href="layout.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -23,7 +22,7 @@
         <div class="nav-content flex between middle" data-aos="fade-down">
             <a href="#">
                 <div class="logo-text animate__animated animate__fadeInDown">
-                   <img src="/assets/logos.png" alt="" style="max-width:25%">
+                    <img src="/assets/logos.png" alt="" style="max-width:25%">
                 </div>
             </a>
             <div class="flex middle" style="gap: 3em;">
@@ -101,94 +100,23 @@
         </div>
     </div>
 
-    <section class="flex column" id="Contact">
-        <div class="section-title">
-            <div class="title-1">Book a Free Demo Today!</div>
-            <div class="title-2">Thank you for considering microHR for your HR software needs. We're excited to show you how our solution can benefit your business. 
 
-                Name *</div>
+    <section class="flex column gap-2" style="padding-top: 20px;">
+        <div class="p-title flex center" style="     color: var(--text-color);
+        ">
+            <h1>ABOUT US</h1>
         </div>
-        <div class="flex eq wrap gap-2">
-            <div class="get-in-touch-left" style="min-width: 300px;" data-aos="zoom-in">
-                <img src="/assets/contact.webp" alt="" >
-            </div>
-            <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
-                <div class="name-email flex eq wrap middle gap">
-                    <input type="text" id="name" placeholder="Your Name" style="min-width: 200px;">
-                    <input type="email" id="email" placeholder="Your Email" style="min-width: 200px;">
-                </div>
-                <input type="text" id="mobile" placeholder="Your Phone">
-                <input type="text" id="subject" placeholder="Your Subject">
-                <textarea id="msg"  name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
-                <div class="submit-btn" id="submitBtn">Submit</div>
-                <div id="contact_err"></div>
-            </div>
+        <div class="all-content flex column top gap-2" style="line-height: 1.55em;
+        
+        margin: auto; color: var(--text-color); ">
+            <p>Welcome to microHR, your comprehensive HR solution designed to empower small businesses and startups. Our user-friendly software is tailored to simplify HR tasks, offering a range of features that enhance efficiency and accuracy in managing your workforce.</p>
+                <p>At microHR, we understand the unique needs of small businesses, and our platform is crafted to streamline essential HR processes. From attendance tracking to payroll management and compliance, our all-in-one solution ensures that you can focus on growing your business while we take care of the HR details.</p>
+                <p>One of the key advantages of microHR is its cost-effectiveness for small businesses. With zero upfront costs, our affordable solution enables you to access essential HR functionalities without breaking the bank. We believe that every business, regardless of its size, deserves access to efficient HR tools, and microHR delivers on that promise.</p>
+                <p>Our user interface is designed with simplicity in mind, making it easy for you to navigate and utilize the features you need. Whether you are a startup with a handful of employees or a growing small business, microHR scales with you, adapting to your evolving HR requirements.</p>
+                <p>Say goodbye to manual payroll calculations and tedious compliance management. microHR includes a robust payroll management system that automates salary calculations, deductions, and salary slip generation. This ensures accuracy and saves you valuable time that can be better spent on strategic business initiatives.</p>
+            <p>Join the ranks of satisfied small businesses that have embraced microHR as their trusted HR partner. Experience the convenience of a comprehensive HR solution that caters specifically to your needs, allowing you to focus on what matters most – the success and growth of your business. Welcome to microHR, where efficiency meets affordability for small business HR solutions.</p>
         </div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var data = {
-                loading: false
-            };
-        
-            var submitBtn = document.getElementById("submitBtn");
-            var nameInput = document.getElementById("name");
-            var emailInput = document.getElementById("email");
-            var mobileInput = document.getElementById("mobile");
-            var msgInput = document.getElementById("msg");
-        
-            submitBtn.addEventListener("click", function() {
-                if (data.loading) {
-                    return;
-                }
-        
-                data.loading = true;
-                submitBtn.innerHTML = "Submitting..."; // Change button text
-        
-                var request_data = {
-                    Name: nameInput.value,
-                    Email: emailInput.value,
-                    Mobile: mobileInput.value,
-                    Message: msgInput.value
-                };
-        
-                fetch("https://api.codebell.io/api/contact", {
-                    method: 'post',
-                    headers: {
-                        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                    },
-                    body: JSON.stringify(request_data)
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.Message && data.Message != this.last_message) {
-                        this.last_message = data.Message;
-                        setTimeout(() => {
-                            this.last_message = "";
-                        }, 1000);
-                        if (data.Status == 2) {
-                            document.getElementById("contact_success").innerHTML =  "Thank you for contacting us! We'll be in touch with you shortly."
-                        } else {
-                            document.getElementById("contact_err").innerHTML = data.Message
-                        }
-                    }
-                    return data;
-                })
-                .catch(error => {
-                    document.getElementById("contact_err").innerHTML = "Unable to complete the current action. " + error.message
-                })
-                .finally(() => {
-                    data.loading = false;
-                    submitBtn.innerHTML = "Submit"; // Restore the button text
-                });
-            });
-        });
-        
-        
-    </script>
-
-
 
    
     <div class="grey-section flex column middle gap-2">
@@ -212,7 +140,7 @@
             </div>
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">
                 <h3>Pages</h3>
-                    <p><a href="about_us.html">About us</a></p>
+                    <p><a href="#">About us</a></p>
                     <p><a href="privacy.html">Privacy policy</a></p>  
                     <p><a href="terms_of_service.html">Terms & Condition</a></p>
             </div>
