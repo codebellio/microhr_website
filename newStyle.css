@@ -196,9 +196,8 @@ section {
     color: var(--primary-color);
 
 }
-li{
+ul{
     list-style: none;
-   
 }
 .all-content{
     letter-spacing: 0.1px;
