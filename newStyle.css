@@ -951,6 +951,7 @@ cursor: pointer;
     transition: var(--transition);
 }
 .blog-cards img {
+   height: 40%;
     margin: 0;
 }
 .blog-cards:hover {
