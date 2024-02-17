@@ -196,9 +196,8 @@ section {
     color: var(--primary-color);
 
 }
-li{
+ul{
     list-style: none;
-   
 }
 .all-content{
     letter-spacing: 0.1px;
@@ -261,10 +260,11 @@ li{
         left: 0;
         right: 100%;
         bottom: 100%;
+        border-radius: 2em;
         background-color: #031521; 
         transform-origin: calc((100% * var(--x)) + 0%) calc((100% * var(--y)) + 0%);       
          transform: scaleX(0) scaleY(0); 
-        transition: transform 0.5s ease;
+        transition: transform 0.2s ease-in-out;
         z-index: -1;
         pointer-events: none;
         
